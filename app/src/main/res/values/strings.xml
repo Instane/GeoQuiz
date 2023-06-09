@@ -2,64 +2,16 @@
     <string name="app_name">GeoQuiz</string>
     //Landmarks
     //Easy
-    <string name="easy_landmark1">Where is the "Eiffel Tower" located?</string>
-    <string name="easy_landmark2">Where is the "Statue of Liberty" situated?</string>
-    <string name="easy_landmark3">Where is the "Leaning Tower of Pisa" located?</string>
-    <string name="easy_landmark4">Where is the "Big Ben" located?</string>
-    <string name="easy_landmark5">Where was the "Burj Khalifa" built?</string>
-    //Medium
-    <string name="medium_landmark1">Where is the "Empire State Building" located?</string>
-    <string name="medium_landmark2">Where is the "Brandenburg Gate" situated?</string>
-    <string name="medium_landmark3">Where is the "Taj Mahal" located?</string>
-    <string name="medium_landmark4">Where is the location of the "The Great Pyramid of Giza"</string>
-    <string name="medium_landmark5">Where was the "Mount Rushmore" built?</string>
-    //Hard
-    <string name="hard_landmark1">Where was the "Cathédrale Notre-Dame" built?</string>
-    <string name="hard_landmark2">Where is the "Petronas Twin Towers" situated?</string>
-    <string name="hard_landmark3">Where is location of the "Lourve Museum"?</string>
-    <string name="hard_landmark4">Where is the "Sagrada Famila" located?</string>
-    <string name="hard_landmark5">Where is the "Acropolis of Athens" situated?</string>
-
-    //Countries
-    //Easy
-    <string name="easy_country1"></string>
-    <string name="easy_country2"></string>
-    <string name="easy_country3"></string>
-    <string name="easy_country4"></string>
-    <string name="easy_country5"></string>
-    //Medium
-    <string name="medium_country1"></string>
-    <string name="medium_country2"></string>
-    <string name="medium_country3"></string>
-    <string name="medium_country4"></string>
-    <string name="medium_country5"></string>
-    //Hard
-    <string name="hard_country1"></string>
-    <string name="hard_country2"></string>
-    <string name="hard_country3"></string>
-    <string name="hard_country4"></string>
-    <string name="hard_country5"></string>
-
-
-    //Cities
-    //Easy
-    <string name="easy_cities1"></string>
-    <string name="easy_cities2"></string>
-    <string name="easy_cities3"></string>
-    <string name="easy_cities4"></string>
-    <string name="easy_cities5"></string>
-    //Medium
-    <string name="medium_cities1"></string>
-    <string name="medium_cities2"></string>
-    <string name="medium_cities3"></string>
-    <string name="medium_cities4"></string>
-    <string name="medium_cities5"></string>
-    //Hard
-    <string name="hard_cities1"></string>
-    <string name="hard_cities2"></string>
-    <string name="hard_cities3"></string>
-    <string name="hard_cities4"></string>
-    <string name="hard_cities5"></string>
+    <string name="landmark1">Where is the "Eiffel Tower" located?</string>
+    <string name="landmark2">Where is the "Statue of Liberty" situated?</string>
+    <string name="landmark3">Where is the "Louvre Museum" located?</string>
+    <string name="landmark4">Where is the "Big Ben" located?</string>
+    <string name="landmark5">Where was the "Burj Khalifa" built?</string>
+    <string name="landmark6">Where is the "Empire State Building" located?</string>
+    <string name="landmark7">Where is the "Brandenburg Gate" situated?</string>
+    <string name="landmark8">Where is the "Sagrada Famila" located?</string>
+    <string name="landmark9">Where is the "Petronas Twin Towers" situated?</string>
+    <string name="landmark10">Where was the "Cathédrale Notre-Dame" built?</string>
 
     //Answers
     <string name="France">France</string>
