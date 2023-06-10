@@ -1,28 +1,41 @@
 <resources>
     <string name="app_name">GeoQuiz</string>
     //Landmarks
-    //Easy
-    <string name="landmark1">Where is the "Eiffel Tower" located?</string>
-    <string name="landmark2">Where is the "Statue of Liberty" situated?</string>
-    <string name="landmark3">Where is the "Louvre Museum" located?</string>
-    <string name="landmark4">Where is the "Big Ben" located?</string>
-    <string name="landmark5">Where was the "Burj Khalifa" built?</string>
-    <string name="landmark6">Where is the "Empire State Building" located?</string>
-    <string name="landmark7">Where is the "Brandenburg Gate" situated?</string>
-    <string name="landmark8">Where is the "Sagrada Famila" located?</string>
-    <string name="landmark9">Where is the "Petronas Twin Towers" situated?</string>
-    <string name="landmark10">Where was the "Cathédrale Notre-Dame" built?</string>
+    <string name="landmark1">Is the Eiffel Tower located in Paris, France?</string>
+    <string name="landmark2">Was the sculpture of Statue of Liberty Frédéric Auguste Bartholdi?</string>
+    <string name="landmark3">Is the Louvre Museum located in Paris, France?</string>
+    <string name="landmark4">Is the Big Ben located in Manchester, United Kingdom?</string>
+    <string name="landmark5">Do you think the Burj Khalifa is in Dubai, United Arab Emirates?</string>
+    <string name="landmark6">Was the Empire State Building built on March 17, 1930?</string>
+    <string name="landmark7">Do you think the Brandenburg Gate is located in Hamburg, Germany?</string>
+    <string name="landmark8">Is the building of Sagrada Family located in Bercelona, Spain?</string>
+    <string name="landmark9">Is the Petronas Twin Towers in Malaysia?</string>
+    <string name="landmark10">Was the Cathédrale Notre-Dame de Paris built back in 1163?</string>
 
-    //Answers
-    <string name="France">France</string>
-    <string name="UAE">United Arab Emirates</string>
-    <string name="USA">United States</string>
-    <string name="Italy">Italy</string>
-    <string name="UK">United Kingdom</string>
-    <string name="Germany">Germany</string>
-    <string name="India">India</string>
-    <string name="Egypt">Egypt</string>
-    <string name="Malaysia">Malaysia</string>
-    <string name="Spain">Spain</string>
-    <string name="Greece">Greece</string>
+    //Country
+    <string name="country1">Where is the "Eiffel Tower" located?</string>
+    <string name="country2">Where is the "Statue of Liberty" situated?</string>
+    <string name="country3">Where is the "Louvre Museum" located?</string>
+    <string name="country4">Where is the "Big Ben" located?</string>
+    <string name="country5">Where was the "Burj Khalifa" built?</string>
+    <string name="country6">Where is the "Empire State Building" located?</string>
+    <string name="country7">Where is the "Brandenburg Gate" situated?</string>
+    <string name="country8">Where is the "Sagrada Famila" located?</string>
+    <string name="country9">Where is the "Petronas Twin Towers" situated?</string>
+    <string name="country10">Where was the "Cathédrale Notre-Dame" built?</string>
+
+    //Cities
+    <string name="cities1">Where is the "Eiffel Tower" located?</string>
+    <string name="cities2">Where is the "Statue of Liberty" situated?</string>
+    <string name="cities3">Where is the "Louvre Museum" located?</string>
+    <string name="cities4">Where is the "Big Ben" located?</string>
+    <string name="cities5">Where was the "Burj Khalifa" built?</string>
+    <string name="cities6">Where is the "Empire State Building" located?</string>
+    <string name="cities7">Where is the "Brandenburg Gate" situated?</string>
+    <string name="cities8">Where is the "Sagrada Famila" located?</string>
+    <string name="cities9">Where is the "Petronas Twin Towers" situated?</string>
+    <string name="cities10">Where was the "Cathédrale Notre-Dame" built?</string>
+
+    //Errors
+
 </resources>
