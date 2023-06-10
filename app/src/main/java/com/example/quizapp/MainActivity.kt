@@ -7,77 +7,99 @@ import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var option1: Button
-    private lateinit var option2: Button
-    private lateinit var option3: Button
-    private lateinit var option4: Button
     private lateinit var nextbutton: Button
     private lateinit var previousbutton: Button
+    private lateinit var truebutton: Button
+    private lateinit var falsebutton: Button
     private lateinit var questiontext: TextView
+    private lateinit var resetbutton: Button
+
 
     //To determine current question
     private var currentIndex = 0
 
-    //To determine the value for the generation of answers
-    private var a = 0
-    private var b = 0
-    private var c = 0
-    private var start = 0
-    private var end = 0
+    //To store the index of the questions that has been answered
+    private var IndexQuestion = intArrayOf()
+
+    //Index for the amount of times cheated
+    private var cheatIndex = 0
 
     private val landmark = listOf(
-        Questions(R.string.landmark1,"@string/France"),
-        Questions(R.string.landmark2,"@string/USA"),
-        Questions(R.string.landmark3,"@string/France"),
-        Questions(R.string.landmark4,"@string/UK"),
-        Questions(R.string.landmark5,"@string/UAE"),
-        Questions(R.string.landmark6,"@string/USA"),
-        Questions(R.string.landmark7,"@string/Germany"),
-        Questions(R.string.landmark8,"@string/Spain"),
-        Questions(R.string.landmark9,"@string/Malaysia"),
-        Questions(R.string.landmark10,"@string/France")
-    )
-
-    private val answers = listOf(
-        Answers(R.string.France),
-        Answers(R.string.USA),
-        Answers(R.string.UAE),
-        Answers(R.string.Italy),
-        Answers(R.string.UK),
-        Answers(R.string.Germany),
-        Answers(R.string.India),
-        Answers(R.string.Egypt),
-        Answers(R.string.Malaysia),
-        Answers(R.string.Spain),
-        Answers(R.string.Greece)
+        Questions(R.string.landmark1,"yes"),
+        Questions(R.string.landmark2,"yes"),
+        Questions(R.string.landmark3,"yes"),
+        Questions(R.string.landmark4,"no"),
+        Questions(R.string.landmark5,"yes"),
+        Questions(R.string.landmark6,"yes"),
+        Questions(R.string.landmark7,"no"),
+        Questions(R.string.landmark8,"yes"),
+        Questions(R.string.landmark9,"yes"),
+        Questions(R.string.landmark10,"yes")
     )
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        truebutton = findViewById(R.id.button6)
+        falsebutton = findViewById(R.id.button5)
         questiontext = findViewById(R.id.question_text)
-        option1 = findViewById(R.id.button)
-        option2 = findViewById(R.id.button2)
-        option3 = findViewById(R.id.button3)
-        option4 = findViewById(R.id.button4)
+        previousbutton = findViewById(R.id.button4)
+        nextbutton = findViewById(R.id.button3)
+        resetbutton = findViewById(R.id.button7)
+
+        updateQuestion()
+        disablebuttons()
+
+        //Declared here as XML text does not allow "<>" values
+        nextbutton.setText("Next >")
+        previousbutton.setText("< Prev")
+
+        truebutton.setOnClickListener() {
+            if (currentIndex == 9)
+                currentIndex -= 1
+            IndexQuestion = addElement(IndexQuestion, currentIndex)
+            disablequestion()
+            nextQuestion()
+            disablebuttons()
+        }
+
+        falsebutton.setOnClickListener() {
+            if (currentIndex == 9)
+                currentIndex -= 1
+            IndexQuestion = addElement(IndexQuestion, currentIndex)
+            disablequestion()
+            nextQuestion()
+            disablebuttons()
+
+        }
+
+        nextbutton.setOnClickListener() {
+            nextQuestion()
+            disablebuttons()
+        }
+
+        previousbutton.setOnClickListener() {
+            previousQuestion()
+            disablebuttons()
+        }
 
         updateQuestion()
         }
 
-
-    //Random number generator
-    fun rand(start: Int, end: Int): Int {
-        require(start <= end) { "Illegal Argument" }
-        return (start..end).random()
-    }
-
-    fun ranans() {
-            a = rand(start, end)
-            b = rand(start, end)
-            c = rand(start, end)
+    //Disables buttons if questions are either first or last
+    private fun disablebuttons() {
+        if (currentIndex == 0)
+            previousbutton.isEnabled = false
+        if (currentIndex == 9)
+            nextbutton.isEnabled = false
+        if (currentIndex != 0)
+            previousbutton.isEnabled = true
+        if (currentIndex != 9)
+            nextbutton.isEnabled = true
     }
 
     private fun nextQuestion() {
@@ -86,62 +108,52 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun previousQuestion() {
-        currentIndex = (currentIndex + 1) % landmark.size
+        currentIndex = (currentIndex - 1) % landmark.size
         updateQuestion()
     }
 
         private fun updateQuestion() {
             val questionTextResId = landmark[currentIndex].textResId
             questiontext.setText(questionTextResId)
-            if (currentIndex == 0) {
-                val buttonResId = answers[0].textResId
-                option1.setText(buttonResId)
-                var i = 0
-                    start = 1
-                    end = 10
-                    ranans()
-                    option2.setText(answers[a].textResId)
-                    option3.setText(answers[b].textResId)
-                    option4.setText(answers[c].textResId)
             }
-            if (currentIndex == 1) {
-                val buttonResId = answers[1].textResId
-                option1.setText(buttonResId)
-        }
-            if (currentIndex == 2) {
-                val buttonResId = answers[1].textResId
-                option1.setText(buttonResId)
-            }
-            if (currentIndex == 3) {
-                val buttonResId = answers[1].textResId
-                option1.setText(buttonResId)
-            }
-            if (currentIndex == 4) {
-                val buttonResId = answers[1].textResId
-                option1.setText(buttonResId)
-            }
-            if (currentIndex == 5) {
-                val buttonResId = answers[1].textResId
-                option1.setText(buttonResId)
-            }
-            if (currentIndex == 6) {
-                val buttonResId = answers[1].textResId
-                option1.setText(buttonResId)
-            }
-            if (currentIndex == 7) {
-                val buttonResId = answers[1].textResId
-                option1.setText(buttonResId)
-            }
-            if (currentIndex == 8) {
-                val buttonResId = answers[1].textResId
-                option1.setText(buttonResId)
-            }
-            if (currentIndex == 9) {
-                val buttonResId = answers[1].textResId
-                option1.setText(buttonResId)
-            }
-            }
+    private fun reset() {
 
+    }
+
+    //Disables the question when user answers it
+    fun disablequestion() {
+        var i = 0
+        do {
+            var done = currentIndex
+            var notdone = IndexQuestion[i]
+            if (notdone == done)
+                truebutton.isEnabled = false
+                falsebutton.isEnabled = false
+            if (notdone != done)
+                truebutton.isEnabled = true
+                falsebutton.isEnabled = true
+            break
+    }
+        while (i < IndexQuestion.size)
+    }
+
+    //To determine whether the answer selected is correct or incorrect
     private fun checkAnswer(userAnswer: String) {
         val correctAnswer = landmark[currentIndex].answer
-}}
+}
+    //Answer option to display "Yes" and "No" for Boolean conversion
+    fun String.toBoolean(): Boolean {
+        when (this.toUpperCase()) {
+            "yes" -> return true
+            "no" -> return false
+        }
+        return false
+    }
+}
+
+//To add element to array "IndexQuestion"
+fun addElement(arr: IntArray, element: Int): IntArray {
+    val mutableArray = arr.toMutableList()
+    mutableArray.add(element)
+    return mutableArray.toIntArray()
+}
